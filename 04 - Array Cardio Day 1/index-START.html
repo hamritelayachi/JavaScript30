@@ -72,14 +72,17 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
     
-    const res8 = (arr) => {
-      const res = {};
+    const countItems = (arr) => {
+      const counts = {};
       for(let item of arr) {
-        item in res ? res[item]++ : res[item] = 1; 
+        // Increase this item's count by 1 (start from 0 if it hasn't been counted yet)
+        counts[item] = (counts[item] || 0) + 1;
       }
-      return res;
+      return counts;
     }
 
+    console.log(countItems(data));
+    
     
 
   </script>
