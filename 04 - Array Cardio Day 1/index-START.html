@@ -64,16 +64,23 @@
     const res7 = people.sort( (per1, per2) => {
       const [per1LastName] = per1.split(', ');
       const [per2LastName] = per2.split(', ');
-
       return per1LastName > per2LastName ? 1 : -1;
     });
 
-    console.log(res7);
-    
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    
+    const res8 = (arr) => {
+      const res = {};
+      for(let item of arr) {
+        item in res ? res[item]++ : res[item] = 1; 
+      }
+      return res;
+    }
+
+    
 
   </script>
 </body>
