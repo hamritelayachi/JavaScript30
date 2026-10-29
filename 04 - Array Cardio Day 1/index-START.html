@@ -53,7 +53,7 @@
     const res4 = inventors.reduce((totalYears, inventor) => totalYears += (inventor.passed - inventor.year), 0);
     
     // 5. Sort the inventors by years lived
-    const res5 = inventors.sort( (inv1, inv2) =>(inv2.passed - inv2.year) - (inv1.passed - inv1.year) );
+    const res5 = inventors.sort((inv1, inv2) =>(inv2.passed - inv2.year) - (inv1.passed - inv1.year));
     
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -61,6 +61,15 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const res7 = people.sort( (per1, per2) => {
+      const [per1LastName] = per1.split(', ');
+      const [per2LastName] = per2.split(', ');
+
+      return per1LastName > per2LastName ? 1 : -1;
+    });
+
+    console.log(res7);
+    
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
