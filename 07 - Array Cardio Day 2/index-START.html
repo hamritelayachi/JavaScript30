@@ -29,10 +29,8 @@
     // Array.prototype.some() // is at least one person 19 or older
     const res1 = people.some( p => {
       const currentYear = 2027;
-      return  currentYear - p.year;
+      return currentYear - p.year >= 19 ? true : false;
     });
-
-    
     
     // Array.prototype.every() // is everyone 19 or older?
 
