@@ -53,7 +53,8 @@
     const res4 = inventors.reduce((totalYears, inventor) => totalYears += (inventor.passed - inventor.year), 0);
     
     // 5. Sort the inventors by years lived
-
+    const res5 = inventors.sort( (inv1, inv2) =>(inv2.passed - inv2.year) - (inv1.passed - inv1.year) );
+    
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
